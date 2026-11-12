@@ -1,0 +1,323 @@
+{
+  "name": "Pacman",
+  "ogmoVersion": "3.4.0",
+  "levelPaths": ["."],
+  "backgroundColor": "#282c34ff",
+  "gridColor": "#3c4049cc",
+  "anglesRadians": true,
+  "directoryDepth": 5,
+  "layerGridDefaultSize": {"x": 8, "y": 8},
+  "levelDefaultSize": {"x": 320, "y": 240},
+  "levelMinSize": {"x": 128, "y": 128},
+  "levelMaxSize": {"x": 4096, "y": 4096},
+  "levelValues": [],
+  "defaultExportMode": ".json",
+  "compactExport": false,
+  "externalScript": "",
+  "playCommand": "",
+  "entityTags": [],
+  "layers": [
+    {
+      "definition": "tile",
+      "name": "walls",
+      "gridSize": {"x": 8, "y": 8},
+      "exportID": "78799498",
+      "exportMode": 0,
+      "arrayMode": 0,
+      "defaultTileset": "walls"
+    },
+    {
+      "definition": "grid",
+      "name": "tiles",
+      "gridSize": {"x": 8, "y": 8},
+      "exportID": "86839389",
+      "arrayMode": 0,
+      "legend": {"0": "#000000ff", "1": "#89898987", "2": "#ff0000ff", "3": "#ffb9ffff"}
+    },
+    {
+      "definition": "entity",
+      "name": "actors",
+      "gridSize": {"x": 8, "y": 8},
+      "exportID": "78799069",
+      "requiredTags": [],
+      "excludedTags": []
+    },
+    {
+      "definition": "entity",
+      "name": "dots",
+      "gridSize": {"x": 8, "y": 8},
+      "exportID": "78802459",
+      "requiredTags": [],
+      "excludedTags": []
+    }
+  ],
+  "entities": [
+    {
+      "exportID": "32038624",
+      "name": "pacman",
+      "limit": 1,
+      "size": {"x": 8, "y": 8},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ffff00ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 8, "y": 8},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": [],
+      "values": []
+    },
+    {
+      "exportID": "69516724",
+      "name": "ghost",
+      "limit": 4,
+      "size": {"x": 8, "y": 8},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ff0000ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 8, "y": 8},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": [],
+      "values": [
+        {"name": "name", "definition": "String", "display": 0, "defaults": "blinky", "maxLength": 0, "trimWhitespace": true}
+      ]
+    },
+    {
+      "exportID": "69605340",
+      "name": "ghost",
+      "limit": 4,
+      "size": {"x": 8, "y": 8},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ffb7ffff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 8, "y": 8},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": [],
+      "values": [
+        {"name": "name", "definition": "String", "display": 0, "defaults": "pinky", "maxLength": 0, "trimWhitespace": true}
+      ]
+    },
+    {
+      "exportID": "69603735",
+      "name": "ghost",
+      "limit": 4,
+      "size": {"x": 8, "y": 8},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#00ffffff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 8, "y": 8},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": [],
+      "values": [
+        {"name": "name", "definition": "String", "display": 0, "defaults": "inky", "maxLength": 0, "trimWhitespace": true}
+      ]
+    },
+    {
+      "exportID": "69608957",
+      "name": "ghost",
+      "limit": 4,
+      "size": {"x": 8, "y": 8},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ffb751ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 8, "y": 8},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": [],
+      "values": [
+        {"name": "name", "definition": "String", "display": 0, "defaults": "clyde", "maxLength": 0, "trimWhitespace": true}
+      ]
+    },
+    {
+      "exportID": "69536716",
+      "name": "dot",
+      "limit": -1,
+      "size": {"x": 2, "y": 2},
+      "origin": {"x": -3, "y": -3},
+      "originAnchored": false,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ffb7ae80",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 8, "y": 8},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": [],
+      "values": [
+        {"name": "is_large", "definition": "Boolean", "display": 0, "defaults": false}
+      ]
+    },
+    {
+      "exportID": "69609142",
+      "name": "dot",
+      "limit": -1,
+      "size": {"x": 8, "y": 8},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ffb7aeff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 8, "y": 8},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": [],
+      "values": [
+        {"name": "isLarge", "definition": "Boolean", "display": 0, "defaults": true}
+      ]
+    }
+  ],
+  "tilesets": [
+    {"label": "walls", "path": "../images/walls-default.png", "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAACYCAYAAADtEGnUAAAAAXNSR0IB2cksfwAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAOvgAADr4B6kKxwAAAAAZiS0dEACIAIgAirOsUcQAAAAd0SU1FB+oKFxMUNZoI65wAAAGHaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49J++7vycgaWQ9J1c1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCc/Pg0KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyI+PHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj48cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0idXVpZDpmYWY1YmRkNS1iYTNkLTExZGEtYWQzMS1kMzNkNzUxODJmMWIiIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIj48dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPjwvcmRmOkRlc2NyaXB0aW9uPjwvcmRmOlJERj48L3g6eG1wbWV0YT4NCjw/eHBhY2tldCBlbmQ9J3cnPz4slJgLAAABxklEQVRoQ+2ZUY7DIAxEYW/i+x9gj8NR6MeGKJixTTAq2YiRkBogr9geaNNGopyDopQi76oUQwgqwNIP77iraIVgaX0IG/AEwAuMZIZgbedwhHC2A3i+5td8vjuEDXg8IKVoGkkF9GgDngBojjQi9XxpfHECyo18AheaB08aq5V7YA6IMmxQ/N35tTZGlOsVEGU1BynFZiUwhDvaAAZAWb4KVSke9awGJAifU64bg/S0co97M83bzqOaW8YRuQFNDoaTyMsjCc1zGcmdg/UAdxLnlXFU7hysB5gPHJbWJxGuQPIC90AR3GWoCWPmBBXizoEbELQl0v97buQf81zo+0O1F/jN/PTh/UFyYpEEuGpuDkb0AoC7jEHaB2gvoDlVCMhpVyGnunPgBqhW7pF7BesBYg54OXn5rqqMgcwi9ZU3750Ix9w5WA8IPCYpVtQXrg9dXL1lFAG9cudgAyYAYBm5B4okL3Q5ThkzJ6gQdw424E9qlq0xt5Eg4I7cOdiACYCmjJIHipAXTLdpY+4QVABpv6kfUgE9UgHpG39UucvYAO7KHcIGvAJgGin/qsNfWIEl9wpeAHD/phrQWd/biP9hOSJ3CB+GL/XsOdJy5wAAAABJRU5ErkJggg==", "tileWidth": 8, "tileHeight": 8, "tileSeparationX": 0, "tileSeparationY": 0, "tileMarginX": 0, "tileMarginY": 0}
+  ]
+}
