@@ -2,7 +2,11 @@ package sprites.ui;
 
 import flixel.FlxSprite;
 import flixel.group.FlxSpriteContainer;
+import flixel.util.FlxColor;
+import openfl.geom.Rectangle;
 import sprites.ui.Text;
+
+using flixel.util.FlxSpriteUtil;
 
 class ToggleOption extends FlxSpriteContainer {
   public var isActive(default, null):Bool = false;
@@ -11,7 +15,8 @@ class ToggleOption extends FlxSpriteContainer {
   var toggleSquare:FlxSprite;
   var toggleSquareInner:FlxSprite;
   var toggleName:Text;
-  var squareHeight:Float = 20;
+	var squareLength:Int = 10;
+	var squareBorderWidth:Int = 1;
 
   public function new(x:Float = 0, y:Float = 0, width:Float, options:{
     label:UnicodeString,
@@ -22,14 +27,22 @@ class ToggleOption extends FlxSpriteContainer {
     super(x, y);
     
     this.width = width;
-    this.height = squareHeight;
+		this.height = squareLength;
     onActive = options.onActive;
     onDeactive = options.onDeactive;
     isActive = options.initialValue;
 
-    toggleName = new Text(x, y + squareHeight / 2, options.label, true);
+		toggleName = new Text(0, squareLength / 2, options.label, true);
     toggleName.y -= toggleName.height / 2;
     add(toggleName);
+		toggleSquare = new FlxSprite(width - squareLength, 0).makeGraphic(squareLength, squareLength, FlxColor.WHITE);
+		toggleSquare.pixels.fillRect(new Rectangle(squareBorderWidth, squareBorderWidth, squareLength - squareBorderWidth * 2,
+			squareLength - squareBorderWidth * 2),
+			FlxColor.TRANSPARENT);
+		add(toggleSquare);
+		toggleSquareInner = new FlxSprite(width - squareLength + squareBorderWidth,
+			squareBorderWidth).makeGraphic(squareLength - squareBorderWidth * 2, squareLength - squareBorderWidth * 2, FlxColor.BLACK);
+		add(toggleSquareInner);
   }
 
   private function set_isActive(value) {

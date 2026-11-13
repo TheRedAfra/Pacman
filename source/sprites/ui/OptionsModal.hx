@@ -59,11 +59,18 @@ class OptionsModal extends FlxSpriteContainer {
         initialValue: if (FlxG.save.data.fullscreenEnabled == null) false else FlxG.save.data.fullscreenEnabled
       },
     ];
-    var optionsGap = 2;
+		var optionsGap = 8;
     var heightSum = 0.0;
+		var optionsPadding = backgroundPadding + 10;
     for (i => option in options) {
-      trace(title.y + title.height + 4 + (optionsGap * i) + heightSum);
-      var optionSprite = new ToggleOption(background.x + backgroundPadding, title.y + title.height + 4 + (optionsGap * i) + heightSum, background.width - backgroundPadding * 2, option);
+			var optionSprite = new ToggleOption(background.x
+				+ optionsPadding, title.y
+				+ title.height
+				+ 4
+				+ (optionsGap * i)
+				+ heightSum,
+				background.width
+				- optionsPadding * 2, option);
       heightSum += optionSprite.height;
       optionSprites.push(optionSprite);
       add(optionSprite);
